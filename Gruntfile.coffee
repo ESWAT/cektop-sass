@@ -10,13 +10,13 @@ module.exports = (grunt) ->
     concurrent:
       dev: [
         "jade:dev"
-        "stylus:dev"
+        "sass:dev"
         "coffee:dev"
         "copy"
       ]
       release: [
         "jade:release"
-        "stylus:release"
+        "sass:release"
         "coffee:release"
         "copy"
       ]
@@ -117,27 +117,28 @@ module.exports = (grunt) ->
           ext: ".html"
         ]
 
-    stylus:
+    sass:
       dev:
         files: [
           expand: true
-          cwd: "src/stylus"
-          src: ["**/*.styl"]
+          cwd: "src/sass"
+          src: ["**/*.scss"]
           dest: "release/css"
           ext: ".css"
         ]
         options:
-          linenos: true
-          compress: false
+          sourceMap: true
 
       release:
         files: [
           expand: true
-          cwd: "src/stylus"
-          src: ["**/*.styl"]
+          cwd: "src/sass"
+          src: ["**/*.scss"]
           dest: "release/css"
           ext: ".css"
         ]
+        options:
+          outputStyle: 'compressed'
 
     uglify:
       release:
@@ -154,9 +155,9 @@ module.exports = (grunt) ->
         files: ["src/**/*.jade"]
         tasks: ["jade:dev"]
 
-      stylus:
-        files: ["src/stylus/**/*.styl"]
-        tasks: ["stylus:dev"]
+      sass:
+        files: ["src/sass/**/*.scss"]
+        tasks: ["sass:dev"]
 
       coffee:
         files: ["src/script/**/*.coffee"]
