@@ -21,7 +21,6 @@
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-imagemin": "~0.8.1",
     "grunt-contrib-jade": "~0.12.0",
-    "grunt-contrib-stylus": "~0.19.0",
     "grunt-contrib-uglify": "~0.5.1",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-gh-pages": "~0.9.1",
@@ -31,7 +30,7 @@
     "markdown-js": "0.0.3",
     "uglify-js": "~2.4.15",
     "grunt-sass": "~0.14.2",
-    "node-bourbon": "^1.2.3"
+    "node-bourbon": "~1.2.3"
   },
   "repository": {
     "type": "git",
