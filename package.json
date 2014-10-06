@@ -30,7 +30,8 @@
     "load-grunt-tasks": "~0.6.0",
     "markdown-js": "0.0.3",
     "uglify-js": "~2.4.15",
-    "grunt-sass": "~0.14.2"
+    "grunt-sass": "~0.14.2",
+    "node-bourbon": "^1.2.3"
   },
   "repository": {
     "type": "git",

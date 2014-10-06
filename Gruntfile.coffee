@@ -127,6 +127,7 @@ module.exports = (grunt) ->
           ext: ".css"
         ]
         options:
+          includePaths:   require('node-bourbon').includePaths
           sourceMap: true
 
       release:
@@ -138,6 +139,7 @@ module.exports = (grunt) ->
           ext: ".css"
         ]
         options:
+          includePaths:   require('node-bourbon').includePaths
           outputStyle: 'compressed'
 
     uglify:
